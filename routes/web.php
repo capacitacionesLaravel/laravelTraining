@@ -20,3 +20,5 @@ Route::get('pedidos',[App\Http\Controllers\PedidoController::class,'index'])->na
 Route::get('pedidos/crear',[App\Http\Controllers\PedidoController::class,'crear'])->name('pedidos.crear');
 
 Route::post('pedidos/guardar',[App\Http\Controllers\PedidoController::class,'guardar'])->name('pedidos.guardar');
+Route::get('pedidos/editar/{pedido}',[App\Http\Controllers\PedidoController::class,'editar'])->name('pedidos.editar');
+Route::post('pedidos/actualizar',[App\Http\Controllers\PedidoController::class,'actualizar'])->name('pedidos.actualizar');

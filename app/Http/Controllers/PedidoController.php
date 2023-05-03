@@ -26,4 +26,17 @@ class PedidoController extends Controller
 
         return redirect()->route('pedidos.index');
     }
+    public function editar(Pedido $pedido)
+    {
+        return view('pedidos.crear', compact('pedido'));
+    }
+
+    public function actualizar(Request $request)
+    {
+        $pedido = Pedido::find($request->id);
+        $pedido->fill($request->all());
+        $pedido->save();
+        return redirect()->back();
+    }
+
 }
