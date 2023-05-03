@@ -18,10 +18,11 @@
                 <td>{{$pedido->descripcion}}</td>
                 <td>{{$pedido->fecha_entrega}}</td>
                 <td>{{$pedido->tienda}}</td>
+                <td><a href="{{ route('pedidos.editar',$pedido->id) }}">Editar</a></td>
             </tr>
-            
+
         @endforeach
     </table>
-    
+
 </body>
 </html>
